@@ -13,7 +13,7 @@ const app = express();
 const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 50 * 1024 * 1024 } });
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "*",
+  origin: "*",
   methods: ["GET", "POST"],
 }));
 app.use(express.json());
